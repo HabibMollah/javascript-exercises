@@ -1,7 +1,7 @@
 const sumAll = function (startNum, endNum) {
   let sum = 0;
   //check for non-number parameters
-  if (typeof startNum !== typeof 1 || typeof endNum !== typeof 1) {
+  if (!Number.isInteger(startNum) || !Number.isInteger(endNum)) {
     sum = "ERROR";
   } else if (endNum < startNum) {
     while (endNum <= startNum) {
@@ -18,7 +18,7 @@ const sumAll = function (startNum, endNum) {
   }
   return sum;
 };
-console.log(sumAll(4, "sjh"));
+console.log(sumAll(1, 4));
 
 // Do not edit below this line
 module.exports = sumAll;
